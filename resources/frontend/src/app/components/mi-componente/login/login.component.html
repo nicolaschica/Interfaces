@@ -1,0 +1,26 @@
+<div class="container py-4 d-flex justify-content-center">
+  <div class="card mb-4 shadow-sm w-100" style="max-width: 400px; height: 400px;">
+    <div class="card-body">
+      <h2 class="card-title mb-4 fw-bold text-center">Iniciar Sesión</h2>
+      <form (ngSubmit)="iniciarSesion()" #loginForm="ngForm">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="nombre" required [(ngModel)]="login.nombre" name="nombre"
+            placeholder="Nombre">
+          <label for="nombre">Nombre</label>
+        </div>
+        <br>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" required [(ngModel)]="login.email" name="email"
+            placeholder="Correo">
+          <label for="email">Correo</label>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center gap-2">
+          <button type="submit" class="btn btn-primary px-4 py-2">Entrar</button>
+          <button type="button" class="btn btn-secondary px-4 py-2" (click)="irARegistro()">Registro</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

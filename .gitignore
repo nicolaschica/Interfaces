@@ -1,0 +1,51 @@
+# ======================================
+# Laravel
+# ======================================
+/vendor
+/node_modules
+/public/storage
+/storage/*.key
+.env
+.env.backup
+.phpunit.result.cache
+Homestead.yaml
+Homestead.json
+/.idea
+/.vscode
+
+# ======================================
+# Angular (resources/frontend)
+# ======================================
+/resources/frontend/node_modules
+/resources/frontend/dist
+/resources/frontend/.angular/cache
+
+# ======================================
+# Logs & Debug
+# ======================================
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+*.log
+
+# ======================================
+# OS / IDE
+# ======================================
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+
+# ======================================
+# Build / Coverage
+# ======================================
+/coverage
+/.nyc_output
+
+# ======================================
+# Others
+# ======================================
+/public/hot
+/public/js/*.map
+/public/css/*.map

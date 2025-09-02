@@ -1,0 +1,37 @@
+<div class="container py-4">
+  <h2 class="text-center mb-4 fw-bold">Lista de Libros</h2>
+
+  <!-- Input de búsqueda -->
+  <div class="mb-3 d-flex justify-content-center">
+    <input type="text" class="form-control w-50" placeholder="Buscar por título o autor" [(ngModel)]="busqueda">
+  </div>
+
+  <table class="table table-striped shadow-sm">
+    <thead>
+      <tr class="text-center">
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Año</th>
+        <th>Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of librosFiltrados()" class="text-center">
+        <td>{{ r.id }}</td>
+        <td>{{ r.titulo }}</td>
+        <td>{{ r.autor }}</td>
+        <td>{{ r.anio }}</td>
+        <td>{{ r.categoria }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="d-flex justify-content-center mt-4">
+    <button class="btn btn-success" (click)="irLibro()">Registrar nuevo libro</button>
+  </div>
+</div>
+
+<div class="text-center mt-4">
+  <button (click)="irAtras()" class="btn btn-secondary">Volver</button>
+</div>

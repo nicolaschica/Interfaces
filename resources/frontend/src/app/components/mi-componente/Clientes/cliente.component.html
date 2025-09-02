@@ -1,0 +1,59 @@
+<div class="container py-4 d-flex justify-content-center">
+  <div class="card mb-4 shadow-sm w-100" style="max-width: 400px; height: 450px;">
+    <div class="card-body">
+      <h2 class="card-title mb-4 fw-bold text-center">Registrate</h2>
+      <form (ngSubmit)="crearCliente()" #clienteForm="ngForm">
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="nombre" required [(ngModel)]="nuevoCliente.nombre" name="nombre"
+            placeholder="Nombre">
+          <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" required [(ngModel)]="nuevoCliente.email" name="email"
+            placeholder="Correo">
+          <label for="email">Correo</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="telefono" required [(ngModel)]="nuevoCliente.telefono"
+            name="telefono" placeholder="Teléfono">
+          <label for="telefono">Teléfono</label>
+        </div>
+
+        <div class="d-flex justify-content-center gap-2">
+          <button type="submit" class="btn btn-primary px-4 py-2">Crear Usuario</button>
+        </div>
+
+        <div class="text-center mt-4">
+          <button (click)="irAtras()" class="btn btn-secondary">Volver</button>
+        </div>
+
+      </form>
+      <!-- Lista de clientes -->
+       <br>
+      <!-- <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Lista de Clientes</h5>
+          <table class="table table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Teléfono</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let cliente of clientes">
+                <td>{{ cliente.nombre }}</td>
+                <td>{{ cliente.email }}</td>
+                <td>{{ cliente.telefono }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>

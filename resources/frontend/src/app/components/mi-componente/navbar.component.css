@@ -1,0 +1,20 @@
+.navbar {
+    background-color: #1f1f1f !important; /* gris bien oscuro */
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: white !important;
+  }
+  
+  .nav-link.active {
+    border-bottom: 2px solid #ffffff;
+  }
+
+  h1{
+    background: white;
+  }
+  h1:hover{
+    background: white;
+  }
+  

@@ -1,0 +1,10 @@
+.btn-color {
+    background: #b1fa8f;
+    color: black;
+    border: none;
+  }
+  .img-fixed {
+  height: 200px;   /* Establece la altura uniforme de todas las imágenes */
+  object-fit: cover;  /* Asegura que las imágenes no se distorsionen */
+  width: 100%;     /* Asegura que las imágenes ocupen el 100% del contenedor */
+}
