@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common'; // necesario para ngFor, ngIf
-import { FormsModule } from '@angular/forms'; // necesario para ngModel
+import { CommonModule } from '@angular/common'; 
+import { FormsModule } from '@angular/forms'; 
 import { ReservaService, Libro } from '../../../../services/reserva.service';
 
 @Component({
   selector: 'app-page1',
-  standalone: true, // componente standalone
-  imports: [CommonModule, FormsModule], // <-- agrega FormsModule aquí
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './page1.component.html',
   styleUrls: ['./page1.component.css']
 })
@@ -46,5 +46,20 @@ export class Page1Component implements OnInit {
       l.titulo.toLowerCase().includes(texto) ||
       l.autor.toLowerCase().includes(texto)
     );
+  }
+
+  eliminarLibro(id: number): void {
+    if (confirm('¿Seguro que deseas eliminar este libro?')) {
+      this.reservaService.eliminarLibro(id).subscribe({
+        next: () => {
+          alert('Libro eliminado con éxito');
+          this.obtenerLibros(); // Refrescar la lista de libros
+        },
+        error: (err) => {
+          console.error('Error al eliminar libro:', err);
+          alert('No se pudo eliminar el libro');
+        }
+      });
+    }
   }
 }

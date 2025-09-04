@@ -3,7 +3,11 @@
 
   <!-- Input de búsqueda -->
   <div class="mb-3 d-flex justify-content-center">
-    <input type="text" class="form-control w-50" placeholder="Buscar por título o autor" [(ngModel)]="busqueda">
+    <input 
+      type="text" 
+      class="form-control w-50" 
+      placeholder="Buscar por título o autor" 
+      [(ngModel)]="busqueda">
   </div>
 
   <table class="table table-striped shadow-sm">
@@ -14,6 +18,7 @@
         <th>Autor</th>
         <th>Año</th>
         <th>Categoría</th>
+        <th>Acciones</th>
       </tr>
     </thead>
     <tbody>
@@ -23,6 +28,11 @@
         <td>{{ r.autor }}</td>
         <td>{{ r.anio }}</td>
         <td>{{ r.categoria }}</td>
+        <td>
+          <button class="btn btn-danger btn-sm" (click)="eliminarLibro(r.id)">
+            Eliminar
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>
