@@ -32,6 +32,20 @@ export class ReservaComponent implements OnInit {
     this.router.navigate(['/page1']);  
   }   
 
+  eliminarLibro() {
+  // Aquí decides la lógica:
+  // Ejemplo: limpiar el formulario
+  this.libro = {
+    titulo: '',
+    autor: '',
+    anio: '',
+    categoria: ''
+  };
+
+  console.log('Libro eliminado');
+}
+
+
   confirmarReserva(): void {
     console.log('Datos enviados:', this.libro);
 
